@@ -13,7 +13,7 @@ const observer = new IntersectionObserver((entries) => {
 });
 
 document.querySelectorAll(
-    ".section-header, .about-grid, .timeline, .skills-grid, .stage-grid, .stage-gallery, .projects-grid, .watch-grid, .watch-summary, .cv-intro, .cv-grid, .cv-download, .contact-main, .contact-bottom"
+    ".section-header, .about-grid, .timeline, .skills-grid, .stage-grid, .stage-gallery, .projects-grid, .watch-intro, .watch-grid, .watch-summary, .cv-intro, .cv-grid, .cv-download, .contact-main, .contact-bottom"
 ).forEach((element) => {
     element.classList.add("reveal");
     observer.observe(element);
