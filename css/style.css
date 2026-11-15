@@ -17,11 +17,11 @@
     --text: #f5f7fa;
     --text-secondary: #9ca8b8;
     --accent: #4ade80;
-    --accent-secondary: #38bdf8;
+    --accent-secondary: #4ade80;
 }
 
 body {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Arial", "Helvetica Neue", Helvetica, sans-serif;
     background: var(--bg);
     color: var(--text);
     line-height: 1.6;
@@ -124,12 +124,7 @@ section {
 
     padding: 120px 40px;
     
-    background:
-        radial-gradient(
-            circle at 75% 50%,
-            rgba(56, 189, 248, 0.12),
-            transparent 35%
-        );
+    background: transparent;
 }
 
 .hero::before {
@@ -226,9 +221,7 @@ section {
     position: relative;
     z-index: 2;
 
-    box-shadow:
-        0 0 40px rgba(74, 222, 128, 0.15),
-        0 0 100px rgba(56, 189, 248, 0.10);
+    box-shadow: 0 0 24px rgba(74, 222, 128, 0.10);
 }
 
 .image-glow {
@@ -239,12 +232,7 @@ section {
 
     border-radius: 50%;
 
-    background:
-        linear-gradient(
-            135deg,
-            rgba(74, 222, 128, 0.35),
-            rgba(56, 189, 248, 0.35)
-        );
+    background: rgba(74, 222, 128, 0.18);
 
     filter: blur(35px);
 
@@ -1171,15 +1159,8 @@ footer {
 /* CARTES IMPORTANTES */
 
 .skill-card.featured {
-    border-color: rgba(56, 189, 248, 0.25);
-
-    background:
-        radial-gradient(
-            circle at 100% 0%,
-            rgba(56, 189, 248, 0.08),
-            transparent 45%
-        ),
-        rgba(255, 255, 255, 0.03);
+    border-color: var(--border);
+    background: rgba(255, 255, 255, 0.035);
 }
 
 
@@ -1688,7 +1669,7 @@ footer {
 
 .project-card:hover {
     transform: translateY(-6px);
-    border-color: rgba(56,189,248,0.35);
+    border-color: rgba(74,222,128,0.35);
 }
 
 
@@ -1867,8 +1848,8 @@ footer {
 }
 
 .watch-intro > p {
-    margin-top: 25px;
-    max-width: 850px;
+    margin-top: 20px;
+    max-width: 900px;
 }
 
 .watch-intro > div > span,
@@ -1918,7 +1899,7 @@ footer {
 .watch-card:hover {
     transform: translateY(-6px);
 
-    border-color: rgba(56,189,248,0.35);
+    border-color: rgba(74,222,128,0.35);
 }
 
 
@@ -2040,10 +2021,12 @@ footer {
         padding: 100px 25px;
     }
 
-    .watch-intro,
-    .watch-grid,
-    .watch-summary {
+    .watch-grid {
         grid-template-columns: 1fr;
+    }
+
+    .watch-card {
+        min-height: auto;
     }
 
 }
@@ -2498,4 +2481,15 @@ footer {
         display: block;
         padding: 13px 5px;
     }
+}
+
+/* Ajustements sobres : typographie et couleurs uniformes */
+.hero h1 span,
+.contact-left h3 strong,
+.footer-top h3 span {
+    color: var(--text);
+}
+.featured {
+    border-color: var(--border);
+    background: rgba(255, 255, 255, 0.035);
 }
